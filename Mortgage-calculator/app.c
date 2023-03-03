@@ -16,16 +16,16 @@ int main( void )
   int run = 1;
 
   while (run = 1){
-    printf("Enter Account Number \n");
+    printf("Enter account number (-1 to end): ");
     scanf("%d", &account_number);
 
-    printf("Enter Mortgage amount \n");
+    printf("Enter mortgage amount (in dollars): ");
     scanf("%d", &mortgage_amount);
 
-    printf("Enter Mortgage Term (ananually) \n");
+    printf("Enter mortgage term (in years): ");
     scanf("%d", &mortgage_term);
 
-    printf("Enter interest rate (in percent) \n");
+    printf("Enter interest rate (as a decimal): ");
     scanf("%lf", &interest_rate);
 
     mortgage_term_months = mortgage_term * 12;
@@ -38,12 +38,7 @@ int main( void )
 
     monthly_payment_round_off = round(required_monthly_payment);
 
-    printf("Account number: %d \n", account_number);
-    printf("Mortgage amount: $ %d \n", mortgage_amount);
-    printf("Interest rate: %lf \n", interest_rate);
-    printf("Total amount payable: %lf \n", total_amount_payable);
-    printf("Required monthly payment: $ %lf \n", required_monthly_payment);
-    printf("Required monthly payment: $ %lf \n", monthly_payment_round_off);
+    printf("The monthly payable interest $ %lf \n", monthly_payment_round_off);
 
   }
   return 0;
